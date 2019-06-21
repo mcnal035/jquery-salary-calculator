@@ -13,15 +13,28 @@
 <body>
     <h1>Salary Calculator</h1>
     <div id="inputDiv">
-        <input type="text" placeholder="First Name" id="firstNameIn">
-        <input type="text" placeholder="Last Name" id="lastNameIn">
-        <input type="number" placeholder="ID Number" id="idIn">
-        <input type="text" placeholder="Job Title" id="jobTitleIn">
-        <input type="number" placeholder="Annual Salary" id="salaryIn">
+        <input class="removeAll" type="text" placeholder="First Name" id="firstNameIn">
+        <input class="removeAll" type="text" placeholder="Last Name" id="lastNameIn">
+        <input class="removeAll" type="number" placeholder="ID Number" id="idIn">
+        <input class="removeAll" type="text" placeholder="Job Title" id="jobTitleIn">
+        <input class="removeAll" type="number" placeholder="$ Annual Salary" id="salaryIn">
         <button id="addItemButton">Submit</button>
     </div>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th class>First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">ID Number</th>
+            <th scope="col">Job Title</th>
+            <th scope="col">Annual Salary</th>
+          </tr>
+        </thead>
+        <tbody id="element">
+
+        </tbody>
     <div id="outputDiv">
-        <ul id="inventoryOut">
+        <ul id="employeeOut">
 
         </ul>
     </div>
