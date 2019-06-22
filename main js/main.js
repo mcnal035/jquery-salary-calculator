@@ -42,7 +42,7 @@ function showEmployeeList(){
          <td>${employeeArray[i].lastName}</td>
          <td>${employeeArray[i].idNumber}</td>
          <td>${employeeArray[i].jobTitle}</td>
-         <td>${employeeArray[i].annualSalary}</td>
+         <td>$ ${employeeArray[i].annualSalary}</td>
          <td><button class="delete">Delete</button></td>
          </tr>`); 
          totalSalary += Number(employeeArray[i].annualSalary);
@@ -59,9 +59,9 @@ function showEmployeeList(){
  let monthlySalary = Math.round(salary / 12);
  let el = $('#employeeOut');
  el.empty();
- el.append(`<li> Monthly Cost ${monthlySalary}`);
-//  if (monthlySalary < 20000) { **** this if statement is not getting the correct input
-//      el.append(`<li class= background-color: crimson>Monthly Cost ${monthlySalary}</li>`)
+ el.append(`<td> Monthly Cost: $ ${monthlySalary}`);
+    if (monthlySalary < 20000) { //**** this if statement is not getting the correct input
+    el.append(`<li class= background-color: crimson>Monthly Cost ${monthlySalary}</li>`)
 //  }
  //$('#employeeOut').append(monthlySalary);
  }
