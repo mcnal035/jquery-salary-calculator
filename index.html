@@ -11,8 +11,8 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <h1>Salary Calculator</h1>
-    <div id="inputDiv">
+    <h1 class="text-primary text-center" >Salary Calculator</h1>
+    <div class= "text-left" id="inputDiv">
         <input class="removeAll" type="text" placeholder="First Name" id="firstNameIn">
         <input class="removeAll" type="text" placeholder="Last Name" id="lastNameIn">
         <input class="removeAll" type="number" placeholder="ID Number" id="idIn">
@@ -23,7 +23,8 @@
     <table class="table table-dark ">
         <thead>
           <tr class="removeElement">
-            <th class>First Name</th>
+            <th scope="col">First Name</th> 
+            <!-- figure out why the first name field is bigger than the other fields. bootstrap plays a key.. I guess. -->
             <th scope="col">Last Name</th>
             <th scope="col">ID Number</th>
             <th scope="col">Job Title</th>
