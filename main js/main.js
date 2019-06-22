@@ -60,9 +60,9 @@ function showEmployeeList(){
  let el = $('#employeeOut');
  el.empty();
  el.append(`<td> Monthly Cost: $ ${monthlySalary}`);
-    if (monthlySalary < 20000) { //**** this if statement is not getting the correct input
-    el.append(`<li class= background-color: crimson>Monthly Cost ${monthlySalary}</li>`)
-//  }
+    // if (monthlySalary < 20000) { //**** this if statement is not getting the correct input
+    // el.append(`<li class= background-color: crimson>Monthly Cost ${monthlySalary}</li>`)
+ //}
  //$('#employeeOut').append(monthlySalary);
  }
  // another function that calculates the total and lists it on the DOM
