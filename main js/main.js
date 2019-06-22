@@ -8,7 +8,7 @@ function onReady() {
     console.log('jq');
 $('#addItemButton').on('click', addEmployee);
 //$('#element').on('click', '.delete', removeEmployee);
-$('.element').on('click', ".delete", deleteMonthly);
+$('.element').on('click', '.delete', deleteMonthly);
 }
 
 
@@ -47,19 +47,22 @@ function showEmployeeList(){
          </tr>`); 
          totalSalary += Number(employeeArray[i].annualSalary);
          
-    } showMonthlySalary(totalSalary);//if(`${employeeArray[i].annualSalary}` > )
+    } showMonthlyTotal(totalSalary);//if(`${employeeArray[i].annualSalary}` > )
  }
 //  function removeEmployee(event){
 //     $(this).remove();
     
 //     console.log('Clicked delete', $(this).parent().text());
 //  }
-
- function showMonthlySalary(salary){
+//this function is showing the monthly cost to the list.
+ function showMonthlyTotal(salary){
  let monthlySalary = Math.round(salary / 12);
  let el = $('#employeeOut');
  el.empty();
- el.append(`<li> monthly Salary ${monthlySalary}`);
+ el.append(`<li> Monthly Cost ${monthlySalary}`);
+//  if (monthlySalary < 20000) { **** this if statement is not getting the correct input
+//      el.append(`<li class= background-color: crimson>Monthly Cost ${monthlySalary}</li>`)
+//  }
  //$('#employeeOut').append(monthlySalary);
  }
  // another function that calculates the total and lists it on the DOM
