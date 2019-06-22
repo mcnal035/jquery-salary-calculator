@@ -7,7 +7,8 @@ let totalSalary = 0;
 function onReady() {
     console.log('jq');
 $('#addItemButton').on('click', addEmployee);
-
+//$('#element').on('click', '.delete', removeEmployee);
+$('.element').on('click', ".delete", deleteMonthly);
 }
 
 
@@ -24,38 +25,48 @@ function addEmployee(){
     //console.log('hello');
     employeeArray.push(employee)
     showEmployeeList();
-    removeEmployee();
-    showTotalSalary(employee.annualSalary);
+    //removeEmployee();
+
 }
 
 //show employee list to the DOM
 function showEmployeeList(){
-    let el = $('#element');
+    let totalSalary = 0;
+    let el = $('.element');
+    el.empty();
     $('.removeAll').val('');
     //console.log('showEmployeeList');
     for (let i = 0; i < employeeArray.length; i++) {
          el.append(`<tr>
-         <th>${employeeArray[i].firstName}</th>
-         <th>${employeeArray[i].lastName}</th>
-         <th>${employeeArray[i].idNumber}</th>
-         <th>${employeeArray[i].jobTitle}</th>
-         <th>${employeeArray[i].annualSalary}</th>
-         <th> 
-         </tr>`);
-    } //if(`${employeeArray[i].annualSalary}` > )
+         <td>${employeeArray[i].firstName}</td>
+         <td>${employeeArray[i].lastName}</td>
+         <td>${employeeArray[i].idNumber}</td>
+         <td>${employeeArray[i].jobTitle}</td>
+         <td>${employeeArray[i].annualSalary}</td>
+         <td><button class="delete">Delete</button></td>
+         </tr>`); 
+         totalSalary += Number(employeeArray[i].annualSalary);
+         
+    } showMonthlySalary(totalSalary);//if(`${employeeArray[i].annualSalary}` > )
  }
- function removeEmployee(task){
-     
-     //console.log('remove employee');
- }
+//  function removeEmployee(event){
+//     $(this).remove();
+    
+//     console.log('Clicked delete', $(this).parent().text());
+//  }
 
- function showTotalSalary(salary){
-   salary = Number(salary);
-    totalSalary += salary;
- console.log('showTotalSalary', totalSalary);
- $('#outputDiv').append(salary);
+ function showMonthlySalary(salary){
+ let monthlySalary = Math.round(salary / 12);
+ let el = $('#employeeOut');
+ el.empty();
+ el.append(`<li> monthly Salary ${monthlySalary}`);
+ //$('#employeeOut').append(monthlySalary);
  }
  // another function that calculates the total and lists it on the DOM
  //employee.annual salary.
 
+ //function deletes the entire list.
+function deleteMonthly(event) {
+    $(this).closest('tr').remove();
+}
 
