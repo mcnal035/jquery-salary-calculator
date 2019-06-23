@@ -1,3 +1,27 @@
+.title{
+    background-color: darkgoldenrod;
+    font-family: inherit;
+    font: bold;
+    margin: 0;
+}
+
 .addcolor{
     background-color: crimson;
 }
+
+.calcheader{
+    font-size: 25px;
+    font: bolder;
+
+    /* font-family: Georgia, 'Times New Roman', Times, serif;  */
+}
+
+.button:hover{
+        width: 100px;
+        height: 27px;
+        background-color: lightcyan;
+        -webkit-transition: width 20s;
+        transition: width 12s;
+        }
+
+

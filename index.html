@@ -11,16 +11,17 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <h1 class="text-primary text-center" >Salary Calculator</h1>
-    <div class= "text-left" id="inputDiv">
+    <h1 class="title text-primary text-center" >Salary Calculator</h1>
+    <header class="calcheader text-left table-dark">Add Employee</header>
+    <div class= "col-sm-9 text-left" id="inputDiv">
         <input class="removeAll" type="text" placeholder="First Name" id="firstNameIn">
         <input class="removeAll" type="text" placeholder="Last Name" id="lastNameIn">
         <input class="removeAll" type="number" placeholder="ID Number" id="idIn">
         <input class="removeAll" type="text" placeholder="Job Title" id="jobTitleIn">
         <input class="removeAll" type="number" placeholder="$ Annual Salary" id="salaryIn">
-        <button id="addItemButton">Submit</button>
+        <button class="button" id="addItemButton">Submit</button>
     </div>
-    <table class="table table-dark ">
+    <table class="col-sm-8 table table-striped ">
         <thead>
           <tr class="removeElement">
             <th scope="col">First Name</th> 
@@ -42,3 +43,4 @@
     </div>
 </body>
 </html>
+

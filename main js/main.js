@@ -26,13 +26,12 @@ function addEmployee(){
     //console.log('hello');
     employeeArray.push(employee)
     showEmployeeList();
-    //removeEmployee();
+    
 
 }
 
 //show employee list to the DOM and adds totalSalary to loop through the array. Shich is then carried to the showMonthlyTotal
 function showEmployeeList() {
-    let totalSalary = 0;
     let el = $('.element');
     el.empty();
     $('.removeAll').val('');
@@ -49,7 +48,7 @@ function showEmployeeList() {
         totalSalary += Number(employeeArray[i].annualSalary);
 
     }
-    showMonthlyTotal(totalSalary); //if(`${employeeArray[i].annualSalary}` > )
+    showMonthlyTotal(totalSalary); 
 }
 
 //this function is showing the monthly cost to the list.
@@ -75,5 +74,6 @@ function addColor(event) {
  //function deletes the entire list.
 function deleteMonthly(event) {
     $(this).closest('tr').remove();
+ 
 }
 
