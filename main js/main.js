@@ -9,6 +9,7 @@ function onReady() {
 $('#addItemButton').on('click', addEmployee);
 //$('#element').on('click', '.delete', removeEmployee);
 $('.element').on('click', '.delete', deleteMonthly);
+// $('.element').on('click', '.delete', deleteEmployeeFromArray);
 }
 
 // Function takes care of pushing the employees into the employeeArray.
@@ -71,9 +72,18 @@ function addColor(event) {
     // $(this).parent().addClass('addcolor');
 }
 
- //function deletes the entire list.
+ //function deletes the list.
 function deleteMonthly(event) {
     $(this).closest('tr').remove();
  
 }
 
+// function deleteEmployeeFromArray(event) {
+//     let el = $('.element');
+//     el.empty();
+//     // trying to use this if statement to remove the item from the delete section.
+//     if (deleteMonthly) {
+//         console.log('if statement in deletemonthly');
+//         $(this).closest('tr');
+//     }
+// }
